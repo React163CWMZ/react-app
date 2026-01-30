@@ -3,6 +3,7 @@ import Message from "./Message";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
+import ButtonCustom from "./components/ButtonCustom/ButtonCustom";
 
 function App() {
   let items = ["New York", "Tokyo", "Peiking", "Paris"];
@@ -25,6 +26,7 @@ function App() {
       <Button color="warning" onClick={AlertShow}>
         My Button
       </Button>
+      <ButtonCustom />
       <ListGroup
         items={items}
         heading="Cities"
