@@ -4,6 +4,7 @@ import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 import ButtonCustom from "./components/ButtonCustom/ButtonCustom";
+import Like from "./components/Like";
 
 function App() {
   let items = ["New York", "Tokyo", "Peiking", "Paris"];
@@ -21,6 +22,7 @@ function App() {
   }
   return (
     <div>
+      <Like></Like>
       <Message></Message>
       {alertVisible && <Alert onClose={AlertClose}>hello,warning</Alert>}
       <Button color="warning" onClick={AlertShow}>
