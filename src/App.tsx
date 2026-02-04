@@ -5,6 +5,7 @@ import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 import ButtonCustom from "./components/ButtonCustom/ButtonCustom";
 import Like from "./components/Like";
+import Quiz from "./components/Quiz";
 
 function App() {
   let items = ["New York", "Tokyo", "Peiking", "Paris"];
@@ -22,6 +23,7 @@ function App() {
   }
   return (
     <div>
+      <Quiz></Quiz>
       <Like></Like>
       <Message></Message>
       {alertVisible && <Alert onClose={AlertClose}>hello,warning</Alert>}
