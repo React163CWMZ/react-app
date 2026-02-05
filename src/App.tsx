@@ -32,6 +32,9 @@ function App() {
         <Link to="/home" style={{ marginRight: "15px" }}>
           Home
         </Link>
+        <Link to="/user" style={{ marginRight: "15px" }}>
+          User
+        </Link>
         <Link to="/about" style={{ marginRight: "15px" }}>
           关于
         </Link>
