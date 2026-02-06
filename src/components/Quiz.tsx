@@ -1,6 +1,6 @@
 import QuizComponent from "react-quiz-component";
 
-function Quiz() {
+const Quiz = () => {
   const quiz = {
     questions: [
       {
@@ -56,6 +56,6 @@ function Quiz() {
       <QuizComponent quiz={quiz} />
     </>
   );
-}
+};
 
 export default Quiz;

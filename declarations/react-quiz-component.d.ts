@@ -16,7 +16,7 @@ declare module 'react-quiz-component' {
     attempts?: number;
   }
 
-  const QuizComponent: React.FC<QuizProps>;
+  const QuizComponent: any;
 
   export default QuizComponent;
 }
