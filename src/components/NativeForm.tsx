@@ -45,7 +45,7 @@ type FormData = z.infer<typeof formSchema>;
 // ======================
 // 3. 表单组件
 // ======================
-export default function NativeForm() {
+const NativeForm = () => {
   const {
     register,
     handleSubmit,
@@ -216,4 +216,5 @@ export default function NativeForm() {
       </form>
     </div>
   );
-}
+};
+export default NativeForm;
