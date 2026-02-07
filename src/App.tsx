@@ -8,6 +8,14 @@ import Like from "./components/Like";
 import Quiz from "./components/Quiz";
 import { Link } from "react-router-dom";
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+} from "./features/counter/counterSlice";
+import type { RootState } from "./store";
+
 function App() {
   let items = ["New York", "Tokyo", "Peiking", "Paris"];
   function handleSelectItem(item: string) {
@@ -22,6 +30,11 @@ function App() {
   function AlertClose() {
     setAlertVisible(false);
   }
+
+  const count = useSelector((state: RootState) => state.counter.value);
+  const dispatch = useDispatch();
+  const [amount, setAmount] = useState("");
+
   return (
     <div>
       {/* 全局导航栏 */}
@@ -39,7 +52,13 @@ function App() {
           关于
         </Link>
       </nav>
-
+      <h1>Count: {count}</h1>
+      <Button onClick={() => dispatch(increment())}>
+        increase count value
+      </Button>
+      <Button onClick={() => dispatch(decrement())}>
+        decrease count value
+      </Button>
       <Quiz></Quiz>
       <Like></Like>
       <Message></Message>
